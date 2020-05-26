@@ -18,7 +18,11 @@ jobs:
       run: npm install
     - name: Build
       run: npm run build
-    # Runs a single command using the runners shell
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
+        FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}
+        FIREBASE_APP_ID:  ${{ secrets.FIREBASE_APP_ID }}
     - name: Run a one-line script
       run: echo Hello, world!
 
