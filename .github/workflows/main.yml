@@ -28,10 +28,10 @@ jobs:
         echo Add other actions to build,
         echo test, and deploy your project.
     - name: Archive Production Artifact
-        uses: actions/upload-artifact@master
-        with:
-          name: dist
-          path: dist
+      uses: actions/upload-artifact@master
+      with:
+        name: dist
+        path: dist
   deploy:
     name: Deploy
     needs: build
