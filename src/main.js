@@ -10,8 +10,8 @@ import App from './App.vue'
 Vue.use(VueMaterial)
 Vue.use(VueClipboard)
 
-const { firebaseConfig } = require('./firebase/init.js');
-const database = Firebase.initializeApp(firebaseConfig).database();
+// const { firebaseConfig } = require('./firebase/init.js');
+const database = Firebase.initializeApp().database();
 Vue.prototype.$database = database;
 
 Vue.mixin({
